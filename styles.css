@@ -1,0 +1,236 @@
+:root{
+  --bg:#fff; --ink:#1f2937; --muted:#6b7280; --brand:#b88a6c;
+  --soft:#efe9e4; --ring:rgba(184,138,108,.35); --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.06);
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Poppins,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+img{max-width:100%;display:block} a{color:inherit;text-decoration:none}
+.container{width:min(1100px,90%);margin-inline:auto}
+
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid #eee}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;gap:10px;align-items:center}
+.logo{width:36px;height:36px;background:var(--brand);border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:600}
+.brand h1{font-family:"Playfair Display",serif;font-size:18px;letter-spacing:.5px;margin:0}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav a{font-weight:500;position:relative;transition:color .25s ease, box-shadow .25s ease;}
+.cta{background:var(--brand);color:#fff;padding:10px 16px;border-radius:999px;box-shadow:var(--shadow)}
+nav a.active{border-bottom:2px solid var(--brand)}
+
+/* --- Nav link hover beige glow --- */
+@media (hover:hover) {
+  nav a:hover,
+  nav a:focus-visible {
+    color: var(--brand);
+    box-shadow: 0 0 10px rgba(184,138,108,.4);
+  }
+}
+
+.hero{background:linear-gradient(180deg,var(--soft),#fff);padding:70px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;color:var(--muted);font-size:12px}
+.hero h2{font-family:"Playfair Display",serif;font-weight:600;font-size:44px;line-height:1.1;margin:.3em 0}
+.hero p{color:var(--muted)}
+.buttons{display:flex;gap:12px;margin-top:14px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 16px;border-radius:12px;border:1px solid transparent}
+.btn.primary{background:var(--brand);color:#fff}
+.btn.secondary{border-color:#e5e7eb}
+.hero-card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)}
+.hero-card img{border-radius:12px}
+
+section{padding:70px 0; scroll-margin-top: 80px; }
+
+
+h3.section-title{font-family:"Playfair Display",serif;font-size:28px;margin:0 0 16px}
+p.lead{color:var(--muted);margin-top:0}
+
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:40px}
+.about-card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow)}
+.service h4{margin:.2em 0 .4em;font-size:18px}
+.badge{display:inline-block;background:var(--soft);color:#6b5b52;padding:4px 10px;border-radius:999px;font-size:12px}
+
+.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:22px;box-shadow:var(--shadow)}
+.price{font-size:28px;font-weight:600}
+.meta{color:var(--muted);font-size:14px}
+
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.quote{background:#fff;border:1px solid #eee;border-radius:var(--radius);padding:18px;box-shadow:var(--shadow);position:relative}
+.quote:before{content:"“";position:absolute;top:-18px;left:12px;font-family:serif;font-size:80px;color:#f1ede9;z-index:-1}
+
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+form .full{grid-column:1/-1}
+label{font-size:12px;color:var(--muted)}
+input, textarea, select{width:100%;padding:12px;border:1px solid #e5e7eb;border-radius:12px;outline:none}
+input:focus, textarea:focus{border-color:var(--brand);box-shadow:0 0 0 4px var(--ring)}
+textarea{min-height:120px}
+
+/* --- Footer --- */
+footer{padding:30px 0;background:#fafafa;border-top:1px solid #eee;color:#6b6f76}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+/* --- Footer link beige glow --- */
+footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color .25s ease, box-shadow .25s ease;
+  border-radius: 4px;
+}
+@media (hover:hover) {
+  footer a:hover,
+  footer a:focus-visible {
+    color: var(--brand);
+    box-shadow: 0 0 10px rgba(184,138,108,.4); /* beige glow */
+  }
+}
+
+/* Beige Pill Variants */
+:root{
+  --beige-1:#f6f6f6;
+  --beige-2:var(--soft);
+  --beige-3:#dcc8ba;
+}
+.pill{display:inline-flex;gap:6px;align-items:center;padding:6px 10px;border-radius:999px;font-size:12px;transition:box-shadow .2s ease,border-color .2s ease;}
+.pill--light{background:var(--beige-1);border:1px solid #eee;color:#6b6f76;}
+.pill--mid{background:var(--beige-2);border:1px solid #e6ddd6;color:#6b5b52;}
+.pill--dark{background:var(--beige-3);border:1px solid #d1bba9;color:#54463e;}
+.pill:hover,.pill:focus-visible{box-shadow:0 4px 14px rgba(0,0,0,.06);border-color:rgba(0,0,0,.08);}
+
+@media (max-width:900px){
+  .hero-grid,.about{grid-template-columns:1fr}
+  .services-grid,.price-grid,.testimonials{grid-template-columns:1fr;}
+  form{grid-template-columns:1fr}
+  .nav{flex-wrap:wrap;gap:10px}
+  nav ul{flex-wrap:wrap}
+}
+
+/* ---------- Modals ---------- */
+.legal-links a {border-bottom:1px solid transparent;}
+.legal-links a:hover {border-color:var(--brand);}
+
+/* Modal layout */
+.modal{position:fixed;inset:0;display:grid;place-items:center;background:rgba(0,0,0,.35);padding:24px;z-index:1000;opacity:0;visibility:hidden;transition:opacity .25s ease,visibility .25s ease;}
+.modal.open{opacity:1;visibility:visible;}
+.modal-dialog{width:min(720px,92vw);max-height:min(82vh,900px);overflow:hidden;background:var(--bg);color:var(--ink);border:1px solid #eee;border-radius:var(--radius);box-shadow:var(--shadow);transform:translateY(10px);transition:transform .25s ease;border-top:4px solid var(--brand);}
+.modal.open .modal-dialog{transform:translateY(0);}
+.modal-title{margin:0;padding:18px 22px 0;font-family:"Playfair Display",serif;font-size:22px;letter-spacing:.3px;}
+.modal-content{padding:14px 22px 6px;max-height:calc(82vh - 140px);overflow:auto;}
+.modal-content p,.modal-content li{color:var(--muted);}
+.modal-actions{display:flex;justify-content:flex-end;gap:10px;padding:12px 22px 22px;background:linear-gradient(180deg,transparent,#fafafa 60%);border-top:1px solid #eee;}
+.modal-close{position:absolute;right:10px;top:10px;width:36px;height:36px;border:1px solid #eee;border-radius:999px;background:#fff;color:var(--ink);font-size:22px;line-height:1;cursor:pointer;box-shadow:var(--shadow);}
+.modal-close:hover{border-color:var(--brand);box-shadow:0 0 0 4px var(--ring);}
+.prose h3{font-size:18px;margin:1.2em 0 .4em;font-family:"Playfair Display",serif;}
+.prose a{color:var(--brand);text-decoration:underline;}
+.prose ul{padding-left:1.1em;}
+
+/* --- Mobile Nav --- */
+.nav-toggle{display:none;border:1px solid #eee;background:#fff;border-radius:12px;padding:8px 10px;box-shadow:var(--shadow);cursor:pointer;line-height:0;}
+.nav-bar{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .2s ease,opacity .2s ease;}
+.nav-bar+.nav-bar{margin-top:5px;}
+.nav-toggle[aria-expanded="true"] .nav-bar:nth-child(1){transform:translateY(7px) rotate(45deg);}
+.nav-toggle[aria-expanded="true"] .nav-bar:nth-child(2){opacity:0;}
+.nav-toggle[aria-expanded="true"] .nav-bar:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+@media(max-width:900px){
+  .nav{align-items:center;}
+  .nav-toggle{display:inline-flex;}
+  nav{width:100%;}
+  .nav-links{display:none;flex-direction:column;gap:12px;margin:10px 0 0;padding:12px 0;border-top:1px solid #eee;}
+  .nav-links.show{display:flex;}
+  .nav-links .cta{align-self:flex-start;}
+  header{background:rgba(255,255,255,.95);}
+}
+
+/* --- Silver Accents --- */
+:root{--accent-silver:#c0c0c0;--accent-silver-soft:rgba(192,192,192,.35);}
+.section-title{position:relative;}
+.section-title::after{content:"";position:absolute;left:0;bottom:-6px;width:60px;height:2px;background:var(--accent-silver);border-radius:2px;}
+.hero{border-bottom:1px solid var(--accent-silver-soft);}
+footer{border-top:1px solid var(--accent-silver-soft);}
+.btn.primary:hover{box-shadow:0 0 0 4px var(--accent-silver-soft);}
+.card:hover,.service:hover,.quote:hover{border-color:var(--accent-silver);box-shadow:0 6px 16px rgba(0,0,0,.08);transition:all .25s ease;}
+.logo{border:1px solid var(--accent-silver-soft);}
+
+/* --- Testimonials Zoom --- */
+.testimonials{overflow:visible;}
+.quote{transition:transform .25s ease,box-shadow .25s ease;will-change:transform;transform-origin:center;z-index:0;}
+@media(hover:hover){
+  .quote:hover,.quote:focus-within{transform:scale(1.03);box-shadow:0 12px 30px rgba(0,0,0,.10);z-index:1;}
+}
+@media(hover:none){
+  .quote.enlarged{transform:scale(1.03);box-shadow:0 12px 30px rgba(0,0,0,.10);z-index:1;}
+}
+@media(prefers-reduced-motion:reduce){.quote{transition:none;}}
+
+/* --- Buttons Zoom --- */
+.btn{transition:transform .25s ease,box-shadow .25s ease;will-change:transform;}
+@media(hover:hover){
+  .btn:hover,.btn:focus-visible{transform:scale(1.05);box-shadow:0 8px 24px rgba(0,0,0,.08);}
+}
+@media(hover:none){
+  .btn.enlarged{transform:scale(1.05);box-shadow:0 8px 24px rgba(0,0,0,.10);}
+}
+@media(prefers-reduced-motion:reduce){.btn{transition:none;}}
+/* --- Pills Hover --- */
+.pill{transition:transform .2s ease,box-shadow .2s ease;will-change:transform,box-shadow;}
+@media(hover:hover){
+  .pill:hover,.pill:focus-visible{transform:scale(1.05);box-shadow:0 6px 20px rgba(0,0,0,.08);}
+}
+@media(hover:none){
+  .pill.enlarged{transform:scale(1.05);box-shadow:0 6px 20px rgba(0,0,0,.08);}
+}
+@media(prefers-reduced-motion:reduce){.pill{transition:none;}}
+
+
+/* =========================================================
+   Back to Top Button
+   Matches SkinBeaüti's soft beige aesthetic
+========================================================= */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--brand);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+/* Hover glow */
+#backToTop:hover {
+  box-shadow: 0 0 0 6px var(--accent-silver-soft);
+  transform: scale(1.08);
+}
+
+/* Visible state */
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  #backToTop {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+/* --- End Back to Top Button --- */
